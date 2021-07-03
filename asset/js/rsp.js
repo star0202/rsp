@@ -14,7 +14,7 @@ function rspcheck(input){
     }
 }
 var user
-while (rspcheck(user)){
+while (rspcheck(user) != true){
     user = prompt("가위/바위/보 중 하나를 입력하세요");
 }
 console.log("2")
