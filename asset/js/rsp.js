@@ -8,7 +8,7 @@ function rspcheck(input){
     else return false
 }
 var user
-while (rspcheck(user) != true){
+while (rspcheck(user)){
     user = prompt("가위/바위/보 중 하나를 입력하세요");
 }
 var randomindex = Math.floor(Math.random() * 3);
