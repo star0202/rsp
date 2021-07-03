@@ -4,13 +4,20 @@ rsp = [
     "보"
 ]
 function rspcheck(input){
-    if (input in rsp) return true
-    else return false
+    if (input in rsp){
+        console.log(1)
+        return true;
+    }
+    else{
+        console.log(3)
+        return false;
+    }
 }
 var user
 while (rspcheck(user)){
     user = prompt("가위/바위/보 중 하나를 입력하세요");
 }
+console.log("2")
 var randomindex = Math.floor(Math.random() * 3);
 airsp = rsp[randomindex];
 switch (user){
