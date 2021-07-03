@@ -18,7 +18,39 @@ switch (user){
         switch (airsp){
             case "가위":
                 alert("비겼습니다");
-            break;
+                break;
+            case "보":
+                alert("이겼습니다!");
+                break;
+            case "바위":
+                alert("졌습니다.....");
+                break;
         }
-    break;
+        break;
+    case "바위":
+        switch (airsp){
+            case "가위":
+                alert("이겼습니다!");
+                break;
+            case "보":
+                alert("졌습니다.....");
+                break;
+            case "바위":
+                alert("비겼습니다");
+                break;
+        }
+        break;
+    case "보":
+        switch (airsp){
+            case "가위":
+                alert("졌습니다.....");
+                break;
+            case "보":
+                alert("비겼습니다");
+                break;
+            case "바위":
+                alert("이겼습니다!");
+                break;
+        }
+        break;
 }
