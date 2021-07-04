@@ -1,63 +1,23 @@
-rsp = [
-    "가위",
-    "바위",
-    "보"
-]
-function rspcheck(input){
-    if (input in rsp){
-        console.log(1)
-        return true;
-    }
-    else{
-        console.log(3)
-        return false;
-    }
-}
-var user
-while (rspcheck(user) != true){
-    user = prompt("가위/바위/보 중 하나를 입력하세요");
-}
-console.log("2")
-var randomindex = Math.floor(Math.random() * 3);
-airsp = rsp[randomindex];
-switch (user){
-    case "가위":
-        switch (airsp){
-            case "가위":
-                alert("비겼습니다");
-                break;
-            case "보":
-                alert("이겼습니다!");
-                break;
-            case "바위":
-                alert("졌습니다.....");
-                break;
+function doGbb(){
+
+    console.log(document.querySelector('input[name="gbbrdo"]:checked').value);
+    gbbrdo = Number((document.querySelector('input[name="gbbrdo"]:checked').value));
+    com_gbb = Math.floor(Math.random()*3);
+    console.log("com : " + com_gbb);
+    strGbbs = ['Scissor', 'Rock', 'Paper']; 
+    strMsg = strGbbs[gbbrdo] + "(User) : " + strGbbs[com_gbb] + "(AI) =";
+        if(gbbrdo == com_gbb){
+            strMsg = strMsg + "It's tie!"
         }
-        break;
-    case "바위":
-        switch (airsp){
-            case "가위":
-                alert("이겼습니다!");
-                break;
-            case "보":
-                alert("졌습니다.....");
-                break;
-            case "바위":
-                alert("비겼습니다");
-                break;
+        else
+        if ((gbbrdo == 0 && com_gbb == 1) 
+         || (gbbrdo == 1 && com_gbb == 2) 
+         || (gbbrdo == 2 && com_gbb == 0)){
+               strMsg = strMsg + "AI win!"
+        }                      
+        else
+        { 
+            strMsg = strMsg + "User win!"                  
         }
-        break;
-    case "보":
-        switch (airsp){
-            case "가위":
-                alert("졌습니다.....");
-                break;
-            case "보":
-                alert("비겼습니다");
-                break;
-            case "바위":
-                alert("이겼습니다!");
-                break;
-        }
-        break;
+        document.getElementById('result_').innerHTML = strMsg;
 }

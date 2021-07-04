@@ -1,1 +1,1 @@
-### Idk why its dont work😭
+### It's Rock Scissor Paper game
